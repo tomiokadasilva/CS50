@@ -1,11 +1,12 @@
+#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-  int i = 3;
-  while (i > 0)
+
+ while (true)
   {
     printf("meow\n");
-    i--;
   }
+
 }
