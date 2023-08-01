@@ -5,3 +5,8 @@
 *.dll
 *.so
 *.dylib
+
+# Ignore build directories
+build/
+bin/
+
