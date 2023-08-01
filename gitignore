@@ -60,6 +60,5 @@ dkms.conf
 
 
 # Ignore build directories
-build/
-bin/
+~/cs50-2023/build/
 
