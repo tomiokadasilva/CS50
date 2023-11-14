@@ -30,27 +30,21 @@ int main(void)
 
 bool prime(int number)
 {
+    if (number <= 1) 
+    {
+        return false;
+    }
+    
     // Checar se o numero recebido é primo
     // número é primo se for divisivel apenas por 1 e ele mesmo
 
-    for (int i = 1; i < number; i++)
+    for (int i = 2; i * i <= number; i++)
     {
-        int remain = number % i;
-
-        if (remain != 0)
+        if (number % i == 0)
         {
-            i++;
+            return false;
         }
-        else 
-        {
-            return number;
-        }
+        
     }
-    
-    
-    
-    
-    
-    // TODO
     return true;
 }
