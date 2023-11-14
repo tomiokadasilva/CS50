@@ -12,7 +12,6 @@ int main(void)
   string phone = get_string("What is your phonenumber ");
 
 
-  printf("Your name is: %s\n", name);
-  printf("Your age is: %i\n", age);
-  printf("Your phone is: %s\n", phone);
+  printf("Your name is: %s\n Your age is: %i \n Your phone is: %s \n", name, age, phone);
 }
+  

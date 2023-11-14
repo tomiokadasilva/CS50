@@ -17,7 +17,7 @@ int main(void)
 
     population = popinit;
     // Prompt for end size
-    do
+    do 
     {
         popend = get_int("Enter the population final size:");
     }
