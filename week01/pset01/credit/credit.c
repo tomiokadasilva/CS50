@@ -1,19 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long get_creditcard (void);
-bool validate_card (long);
+long card;
 
 int main(void) 
 {
-    long get_creditcard(void);
-    bool validate_card(card);
+    long get_creditcard();
+    bool validate_card(long card);
 }
 
 long get_creditcard (void)
 {
-    long card;
-
     do
     {
         card = get_long ("Number: ");
@@ -26,5 +23,16 @@ long get_creditcard (void)
 
 bool validate_card (long card)
 {
-    int digit = card % 10 ;
+    
+    int digit;
+
+    for (long i = 0; i < card; i++)
+    {
+        digit = card % 10;
+        printf ("First Digit: %i", digit);
+        card = card / 10;
+        printf ("%li", card);
+    }
+
+    return 0;
 }
