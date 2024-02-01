@@ -1,31 +1,52 @@
 #include <stdio.h>
 #include <cs50.h>
 
+float average(int length, int array[]);
+int number(void);
+void get_scores(int length, int array[]);
+
 int main(void)
-{
-    int sum = 0;
-    int n;
+{  
     // Get a non-negative number of scores
+    int n = number();
+
+    // Get scores
+    int scores[n];
+    get_scores(n, scores);
+
+    // Print Average of Scores
+    printf("Average: %f\n", average (n, scores));
+}
+
+void get_scores(int length, int array[])
+{   
+    //Create array of size n
+    for (int i = 0; i < length; i++)
+    {
+        array[i] = get_int("Score: ");
+    }
+}
+
+int number(void)
+{
+    int n = 0;
     do
     {
         n = get_int("How many scores do you want to input?(1-9) ");
     } while (n <= 0);
-    
-    int scores[n];
 
-    // Get scores
-    for (int i = 0; i < n; i++)
-    {
-        scores[i] = get_int("Score: ");
-    }
+    return n;
+}
 
-    // Calculate Sum of scores
-    for (int i = 0; i < n; i++)
-    {
-        sum += scores[i];
-    }
-    
-    // Print Average of Scores
-    printf("Average: %f\n", sum / (float) n);
-    
+
+float average(int length, int array[]) 
+{
+        // Calculate Sum of scores
+        int sum = 0;
+        for (int i = 0; i < length; i++)
+        {
+            sum += array[i];
+        }
+
+        return sum/ (float) length;
 }
