@@ -9,7 +9,7 @@ int main(void)
     {
         height = get_int ("Height: "); 
     } 
-    while (height < 1 || height > 8);
+    while (height < 1 || height > 100);
     
     for (row = 0; row < height; row++)
     {
@@ -21,7 +21,7 @@ int main(void)
         {
             printf ("#");
         }
-        printf("  ");
+        // printf("  ");
         for (column = 0; column <= row; column++)
         {
             printf ("#");
