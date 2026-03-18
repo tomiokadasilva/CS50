@@ -50,17 +50,20 @@ int check_brand(long card)
         return 1; // American Express
     }
     else if ((length == 16) && ((card / 100000000000000 == 51) || (card / 100000000000000 == 52) ||
-                                (card / 100000000000000 == 53) || (card / 100000000000000 == 54) || (card / 100000000000000 == 55)))
+                                (card / 100000000000000 == 53) || (card / 100000000000000 == 54) || 
+                                (card / 100000000000000 == 55)))
     {   
         printf("MASTERCARD\n");
         return 2; // MasterCard
     }
-    else if ((length == 13 || length == 16) && (card / 1000000000000 == 4 || card / 1000000000000000 == 4))
+    else if ((length == 13 || length == 16) && 
+             (card / 1000000000000 == 4 || card / 1000000000000000 == 4))
     {
         printf("VISA\n");
         return 3; // Visa
     }
-    else {
+    else 
+    {
         printf("INVALID\n");
     }
 
@@ -87,9 +90,11 @@ int product(long card)
     int digit;
     int productSum = 0;
     int product;
-    card /= 10; /*Skips the first digit as we want to select each other digit starting with the number’s second-to-last digit*/
+    card /= 10; /*Skips the first digit as we want to select each other digit starting with the
+     number’s second-to-last digit*/
 
-    /* Multiplies every other digit by 2 and if the product is greater than 9, it adds individual digits*/
+    /* Multiplies every other digit by 2 and if the product is greater than 9, it adds individual 
+    digits*/
     for (int i = 0; i < 8; i++)
     {
         digit = card % 10;

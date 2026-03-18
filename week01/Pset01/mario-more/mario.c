@@ -7,27 +7,26 @@ int main(void)
 
     do
     {
-        height = get_int ("Height: "); 
+        height = get_int("Height: "); 
     } 
     while (height < 1 || height > 100);
     
     for (row = 0; row < height; row++)
     {
-        for (space = 0; space < height - row - 1 ; space++)
+        for (space = 0; space < height - row - 1; space++)
         {
-            printf (" ");
+            printf(" ");
         }
         for (column = 0; column <= row; column++)
         {
-            printf ("#");
+            printf("#");
         }
-        // printf("  ");
+        printf("  ");
         for (column = 0; column <= row; column++)
         {
-            printf ("#");
+            printf("#");
         }
         printf("\n");
     }
-    
 }
     
