@@ -33,10 +33,11 @@ int count_letters(string t)
 {
     for (int i = 0, n = strlen(t); i < n; i++)
     {
-        if ((t[i] >= 65 && t[i] <= 90) || (t[i] >= 97 && t[i] <= 122))
+        if (isalpha(t[i])) // isalpha is a function from the ctype library that verifies if a character is from the alphabet. 
+                           // you could compare if the character is between the intervals a-z || A-Z in the ASCII table as well.
         {
             letter++;
-        }    
+        } 
     }
     printf("Total number of letters: %i \n ", letter);
     return letter;
